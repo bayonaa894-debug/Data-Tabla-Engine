@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data-Table Engine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>📊 Data-Table Engine</h1>
+
+  <div class="controls">
+    <input type="file" id="fileInput">
+    <button onclick="cargarEjemplo()">Cargar datos de prueba</button>
+    <br><br>
+    <input type="text" id="search" placeholder="Buscar estudiante...">
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th onclick="ordenar('nombre')">Nombre ↕</th>
+        <th onclick="ordenar('edad')">Edad ↕</th>
+        <th onclick="ordenar('nota')">Nota ↕</th>
+      </tr>
+    </thead>
+    <tbody id="tabla">
+      </tbody>
+    <tfoot>
+      <tr>
+        <td><b>Promedio General</b></td>
+        <td colspan="2" id="promedio">0.00</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <div id="paginacion" class="pagination-container"></div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
